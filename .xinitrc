@@ -25,19 +25,28 @@ fi
 
 # start some nice programs
 
-#eval $(gnome-keyring-daemon --start)
-#eval $(ssh-agent -s)
-#export SSH_AUTH_SOCK
-
 pipewire &
 pipewire-pulse &
 wireplumber &
 
 xrandr --output HDMI-1 --mode 1920x1080 --rate 144
 setxkbmap br
-#$HOME/.fehbg
-#picom -b
+$HOME/.fehbg
+picom -b
 # Statusbar
 #$HOME/code/dwm-bar/dwm_bar.sh &
+
+if pidof ssh-agent >/dev/null; then
+    echo "ssh-agent already running."
+else
+    eval $(ssh-agent -s)
+fi
+
+if pidof gnome-keyring-daemon >/dev/null; then
+    echo "gnome-keyring-daemon already running."
+else
+    eval $(gnome-keyring-daemon --start)
+fi
+export SSH_AUTH_SOCK
 
 exec dbus-launch --sh-syntax --exit-with-session dwm

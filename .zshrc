@@ -86,7 +86,8 @@ PATH="$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$PATH"
 alias reboot="loginctl reboot"
 alias poweroff="loginctl poweroff"
 alias down="bdpandl -n 300"
-alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland --no-sandbox"
+alias vinit="npm create vite@latest"
+#alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland --no-sandbox"
 
 xdg_dirs='XDG_DESKTOP_DIR="$HOME/desk"
 XDG_DOWNLOAD_DIR="$HOME/dwns"
@@ -96,6 +97,7 @@ XDG_DOCUMENTS_DIR="$HOME/docs"
 XDG_MUSIC_DIR="$HOME/music"
 XDG_PICTURES_DIR="$HOME/pics"
 XDG_VIDEOS_DIR="$HOME/vids"'
+
 
 update_xdg_dirs() {
   TO_REMOVE=(Desktop Documents Downloads Music Pictures Videos Public Templates)
