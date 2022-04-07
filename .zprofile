@@ -10,7 +10,7 @@ export EDITOR="nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 #export XDG_CURRENT_DESKTOP=sway
 export XAUTHORITY="/tmp/.Xauthority"
-export MOZ_ENABLE_WAYLAND=1
+#export MOZ_ENABLE_WAYLAND=1
 export NPM_CONFIG_PREFIX="$HOME/.local"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
