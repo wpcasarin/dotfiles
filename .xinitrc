@@ -49,4 +49,4 @@ else
 fi
 export SSH_AUTH_SOCK
 
-exec dbus-launch --sh-syntax --exit-with-session dwm
+exec dbus-launch --sh-syntax --exit-with-session qtile start
