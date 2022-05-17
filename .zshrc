@@ -98,7 +98,6 @@ XDG_MUSIC_DIR="$HOME/music"
 XDG_PICTURES_DIR="$HOME/pics"
 XDG_VIDEOS_DIR="$HOME/vids"'
 
-
 update_xdg_dirs() {
   TO_REMOVE=(Desktop Documents Downloads Music Pictures Videos Public Templates)
   TO_CREATE=(desk docs dwns music pics vids .config)
