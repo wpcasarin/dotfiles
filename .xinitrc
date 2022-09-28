@@ -24,16 +24,6 @@ if [ -f "$usermodmap" ]; then
 fi
 
 # start some nice programs
-
-pipewire &
-pipewire-pulse &
-wireplumber &
-
-xrandr --output HDMI-1 --mode 1920x1080 --rate 144
-setxkbmap br
-$HOME/.fehbg
-picom -b
-# Statusbar
-#$HOME/code/dwm-bar/dwm_bar.sh &
+xrandr --output HDMI-1 --mode 1920x1080 --rate 144 --output eDP-1 --off
 
 exec dbus-launch --sh-syntax --exit-with-session qtile start
