@@ -12,6 +12,12 @@ source $ZSH/oh-my-zsh.sh
 
 alias down="bdpandl -n 300"
 alias vinit="yarn create vite"
+alias ls="exa --icons --group-directories-first"
+alias cat="bat --style=auto"
+alias bathelp='bat --plain --language=help'
+help() {
+    "$@" --help 2>&1 | bathelp
+}
 
 xdg_dirs='
 XDG_DESKTOP_DIR="$HOME/desk"
