@@ -10,6 +10,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+alias reboot="loginctl reboot"
+alias poweroff="loginctl poweroff"
 alias down="bdpandl -n 300"
 alias vinit="yarn create vite"
 alias ls="exa --icons --group-directories-first"

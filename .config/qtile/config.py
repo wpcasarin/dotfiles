@@ -51,6 +51,8 @@ keys = [
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "d", lazy.spawn("wofi"),
         desc="Spawn a command using a prompt widget"),
+    Key([mod, "shift"], "d", lazy.spawn("scrot"),
+        desc="Spawn a command using a prompt widget"),
 ]
 
 groups = [Group(i) for i in "123456789"]
