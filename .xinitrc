@@ -24,9 +24,9 @@ if [ -f "$usermodmap" ]; then
 fi
 
 # start some nice programs
-xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --output DP-4 --off
+xrandr --output HDMI-1 --mode 1920x1080 --rate 144 --output eDP-1 --off
 
 pipewire &
 mega-cmd-server &
 
-exec dbus-launch --sh-syntax --exit-with-session qtile start
+exec dbus-launch --sh-syntax --exit-with-session bspwm
