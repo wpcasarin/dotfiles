@@ -3,6 +3,7 @@
 if pidof ssh-agent >/dev/null; then
     echo "ssh-agent already running."
 else
+    echo "starting ssh-agent"
     eval $(ssh-agent -s)
 fi
 
