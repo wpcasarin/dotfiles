@@ -1,17 +1,12 @@
 #!/bin/bash
 
-if pidof ssh-agent >/dev/null; then
-    echo "ssh-agent already running."
-else
-    echo "starting ssh-agent"
-    eval $(ssh-agent -s)
-fi
-
 if pidof gnome-keyring-daemon >/dev/null; then
-    echo "gnome-keyring-daemon already running."
+    echo "starting gnome-keyring-daemon"
+    killall "gnome-keyring-daemon"
+    eval $(gnome-keyring-daemon --start --components=secrets,ssh)
 else
-    eval $(gnome-keyring-daemon --start)
+    eval $(gnome-keyring-daemon --start --components=secrets,ssh)
 fi
 
-export SSH_AUTH_SOCK
-export XAUTHORITY="/tmp/.Xauthority"
+export SSH_AUTH_SOCK=/run/user/$(id -u)/keyring/ssh
+export XAUTHORITY=/tmp/.Xauthority
